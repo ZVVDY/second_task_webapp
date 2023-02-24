@@ -7,6 +7,9 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * User initialization class
+ */
 @Data
 @AllArgsConstructor
 public class LoginService {
@@ -21,6 +24,12 @@ public class LoginService {
         users.add(user2);
     }
 
+    /**
+     * Verification of the user's login and password
+     * @param login
+     * @param password
+     * @return
+     */
     public boolean checkCredentials(String login, String password) {
         for (User user : users) {
             if ((user.getNameUser().equals(login)) && (user.getPasswordUser().equals(password))) {

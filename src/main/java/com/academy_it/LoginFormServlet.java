@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Login and password entry servlet
+ */
 @WebServlet(urlPatterns = "/loginForm")
 public class LoginFormServlet extends HttpServlet {
     @Override

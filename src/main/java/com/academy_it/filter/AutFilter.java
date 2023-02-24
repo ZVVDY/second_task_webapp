@@ -7,7 +7,10 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/devices"})
+/**
+ * Page URL Filter
+ */
+@WebFilter(urlPatterns = "/*")
 public class AutFilter implements Filter {
 
     @Override

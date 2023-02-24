@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
+/**
+ * Servlet after entering the login
+ */
 @WebServlet(urlPatterns = ("/login"))
 public class LoginServlet extends HttpServlet {
     @Override
