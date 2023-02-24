@@ -2,7 +2,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
+    <head>
     <title>Login</title>
     </head>
      <body>
@@ -13,13 +13,15 @@
     if (loginService.checkCredentials(login, password )){
 %>
 <%= ("Hello " + login + " !")%>
-<br>
+    <br>
 <%Date date = new Date();%>
 <%= date%>
-<br>
-<form action=devices>
-<button>Device Home</button>
-</form>
+     <br>
+Сlick to see the list of devices:
+     <br>
+     <form action=devices>
+     <button>Device Home</button>
+     </form>
 <%
     }
  else {
@@ -28,5 +30,5 @@
        <%
            }
        %>
-</body>
+     </body>
 </html>

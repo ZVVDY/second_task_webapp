@@ -6,8 +6,10 @@
 <body>
 "Hello, enter your Login and Password"
 <form action="login">
+    Login:
     <input name="login" type="text">
     <br>
+    Password:
     <input name="password" type="text">
     <br>
     <input type="submit">
