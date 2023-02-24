@@ -26,6 +26,7 @@ public class LoginService {
 
     /**
      * Verification of the user's login and password
+     *
      * @param login
      * @param password
      * @return

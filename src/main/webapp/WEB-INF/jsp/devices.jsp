@@ -13,7 +13,6 @@
     List <Device> deviceList = deviceService.getDevice();
 %>
     <h3>List of home appliances:</h3>
-    <br>
 <%
     for (Device device: deviceList) {
         out.println("Device -" + device.getTypeOfDevice() + " - " + device.getPowerOfDevice() + " Wt");
