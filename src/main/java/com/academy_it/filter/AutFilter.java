@@ -7,6 +7,9 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+/**
+ * Page URL Filter
+ */
 @WebFilter(urlPatterns = "/*")
 public class AutFilter implements Filter {
 
@@ -17,13 +20,11 @@ public class AutFilter implements Filter {
         var url = httpRequestServlet.getRequestURL().toString();
         var session = httpRequestServlet.getSession();
         User user = (User) session.getAttribute("userTemp");
-
-        if ((user != null)   || (url.contains("/login")) || (url.contains("/loginForm"))) {
+        if ((user != null) || (url.contains("/loginForm")) || (url.contains("/login"))) {
             filterChain.doFilter(servletRequest, servletResponse);
             System.out.println("Filter");
-        }
-        else {
-            servletRequest.getRequestDispatcher("/loginForm").forward(servletRequest,servletResponse);
+        } else {
+            servletRequest.getRequestDispatcher("/loginForm").forward(servletRequest, servletResponse);
         }
     }
 }

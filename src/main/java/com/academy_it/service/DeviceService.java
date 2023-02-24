@@ -5,6 +5,9 @@ import com.academy_it.model.entity.Device;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Device initialization class
+ */
 public class DeviceService {
     public List<Device> getDevice() {
         List<Device> devices = new ArrayList<>();

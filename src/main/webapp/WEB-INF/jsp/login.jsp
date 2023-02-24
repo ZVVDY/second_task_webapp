@@ -1,32 +1,24 @@
-<%@ page import="com.academy_it.service.LoginService" %>
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
+    <head>
     <title>Login</title>
     </head>
      <body>
 <%
-    LoginService loginService = new LoginService();
     String login = (String) request.getAttribute("login");
-    String password = (String) request.getAttribute("password");
-    if (loginService.checkCredentials(login, password )){
 %>
+<h3>
 <%= ("Hello " + login + " !")%>
-<br>
+    <br>
+    <p style="color:#DC143C">
+    Сurrent date and time:</p>
 <%Date date = new Date();%>
 <%= date%>
-<br>
-<form action=devices>
-<button>Device Home</button>
-</form>
-<%
-    }
- else {
-    %>
-<%=("Access denied!")%>
-       <%
-           }
-       %>
-</body>
+    <p style="color:#0000ff">
+Сlick to see the list of devices:</p></h3>
+     <form action=devices>
+     <button>Device Home</button>
+     </form>
+     </body>
 </html>
